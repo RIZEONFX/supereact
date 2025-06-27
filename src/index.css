@@ -1,0 +1,389 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  --bg-primary: #ffffff;
+  --bg-invert-primary: #121212;
+  --bg-secondary: #535bf2;
+  
+  --txt-primary: #213547;
+  --txt-secondary: #eaeaea;
+}
+
+a, button {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  font-weight: 500;
+  color: var(--txt-primary);
+  text-decoration: none;
+}
+
+textarea {
+  font-family: Helvetica;
+}
+
+.menu a:hover {
+  color: var(--txt-secondary);
+  background-color: var(--bg-invert-primary);
+}
+
+.menu a {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.topBtn:hover, .btn-group button:hover, form button:hover, .profile-cnt button:hover {
+  color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.97);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.7em;
+  line-height: 1.1;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  background-color: var(--bg-primary);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.topBtn {
+  display: inline-block;
+  font-size: 1.2rem;
+  height: 100%;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #121212;
+  color: var(--txt-secondary);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: 50vh;
+  justify-content: space-around;
+  font-size: 1.1rem;
+}
+
+.table-container {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 4rem;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.btn-group button, .profile-cnt button {
+  margin: 0.1rem;
+  padding: 0.4rem 0.63rem;
+  font-size: 0.7rem;
+  border-radius: 0.2rem;
+  background-color: var(--bg-invert-primary);
+  color: var(--txt-secondary);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+td, th {
+  padding: 0.2rem 0.5rem;
+  overflow: scroll;
+}
+
+thead tr {
+  background-color: var(--bg-invert-primary);
+  color: var(--txt-secondary);
+}
+
+td {
+  border: solid 0.4px;
+}
+
+colgroup col:nth-child(1) {
+  width: 10%;
+}
+colgroup col:nth-child(2) {
+  width: 30%;
+}
+colgroup col:nth-child(3) {
+  width: 30%;
+}
+colgroup col:nth-child(4) {
+ width: 30%;
+}
+
+.mtdGet {
+  text-decoration: none;
+}
+.mtdDelete {
+  text-decoration: underline;
+  text-decoration-color: red;
+  cursor: pointer;
+}
+.mtdUpdate {
+  text-decoration: underline;
+  text-decoration-color: blue;
+  cursor: pointer;
+}
+
+.form-cnt {
+  position: relative;
+  z-index: 2;
+  background-color: var(--bg-primary);
+  padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-size: 1.05rem;
+  text-align: left
+}
+
+form input, form button {
+  margin: 0.1rem 0 0.3rem 0;
+  padding: 0.2rem;
+  font-size: 0.95rem;
+}
+
+form button {
+  background-color: var(--bg-invert-primary);
+  color: var(--txt-secondary);
+  border-radius: 0.2rem;
+  font-weight: 700;
+}
+
+#label-pfp {
+  text-align: center;
+  margin: 0.7rem 1rem;
+  font-weight: bold;
+}
+
+.cnt-message {
+  width: 100vw;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.message-wrapper {
+  width: 100%; 
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+/*.message-wrapper:first-child {
+  margin-top: 3rem;
+} karena bukan lagi first child maka tidak berfungsi*/
+.message-wrapper:last-child {
+  margin-bottom: 2rem;
+}
+
+
+.message {
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.message > * {
+  text-align: left;
+}
+
+.pfp-message {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.text {
+  max-width: 17rem;
+  word-break: break-word;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.form-message {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2.7rem;
+  padding: 0 0.2rem;
+  position: fixed;
+  gap: 0.3rem;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.input-message {
+  flex-grow: 1;
+  font-size: 0.9rem; 
+  resize: none;
+  padding: 0.3rem 0.4rem;
+  margin: 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.input-message:focus {
+  outline: 1.7px solid var(--bg-invert-primary);
+}
+
+.btn-send-message {
+  margin: 0;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem; 
+  font-weight: 500;
+}
+
+.deleter {
+  display: none;
+  position: fixed;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  background-color: var(--bg-primary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.icon-wrapper > * {
+  width: 50%;
+}
+
+.icon-wrapper > *:hover {
+  opacity: 0.7;
+}
+
+@media (prefers-color-scheme: dark){
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+  a {
+    color: var(--txt-secondary);
+  }
+  .top-bar {
+    background-color: #100000;
+    border-bottom: 1.7px solid var(--bg-secondary);
+  }
+  .menu a, .menu-chat {
+    border: solid 1.7px #5C6BC0;
+    color: #C5CAE9;
+    filter: brightness(1.2);
+  }
+  .menu a:hover, .topBtn, .menu-chat:hover {
+    background-color: var(--bg-secondary);
+  }
+  thead tr {
+    background-color: var(--bg-secondary);
+    color: var(--txt-secondary);
+  }
+  tbody td {
+    border: none;
+  }
+  tbody tr:nth-child(even) {
+    background-color: rgba(83,91,242, 0.15);
+  }
+  td {
+    border: solid var(--bg-secondary) 0.4px;
+  }
+  .btn-group button, .profile-cnt button {
+    background-color: var(--bg-secondary);
+  }
+  .form-cnt {
+    background-color: transparent;
+  }
+  form button {
+    background-color: var(--bg-secondary);
+  }
+  form input {
+    border-radius: 0.2rem;
+    background-color: transparent;
+    border-bottom: 2px solid var(--bg-secondary);
+  }
+  form label, h2 {
+    color: var(--txt-secondary);
+  }
+  form input:focus {
+    outline: none;
+  }
+  .input-message:focus {
+    outline: none;
+  }
+}
+
+@media screen and (min-width: 750px){
+  :root {
+    font-size: 24px;
+  }
+  colgroup col:nth-child(1) {
+    width: 3%;
+  }
+  colgroup col:nth-child(2) {
+    width: 28%;
+  }
+  colgroup col:nth-child(3) {
+    width: 41%;
+  }
+  colgroup col:nth-child(4) {
+    width: 28%;
+  }
+}
