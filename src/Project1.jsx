@@ -7,7 +7,7 @@ const Project1 = () => {
   const [error, setError] = useState(null);
   const [method, setMethod] = useState("mtdGet");
   const navigate = useNavigate();
-  const path = 'http://localhost:7000';
+  const path = 'https://curious-succinct-jewel.glitch.me';
   
   const getData = async () => {
     setMethod("mtdGet")
