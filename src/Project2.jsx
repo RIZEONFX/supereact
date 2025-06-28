@@ -10,7 +10,7 @@ const Project2 = () => {
   const [error, setError] = useState(null);
   const [pfpURL, setPfpURL] = useState(defaultPfp);
   const navigate = useNavigate();
-  const url = "http://localhost:7000";
+  const url = "https://curious-succinct-jewel.glitch.me";
   useEffect(() => {
     api.get('/profile').then(res => {
       const response = res.data.payload.data;
