@@ -14,7 +14,7 @@ const Update = () => {
     key: ""
   })
   
-  const path = "http://localhost:7000";
+  const path = "https://curious-succinct-jewel.glitch.me";
   
   const handleChange = (e) => {
     const { name, value } = e.target;
